@@ -1,0 +1,28 @@
+{
+  "name": "simple-chat-server",
+  "description": "graphql server part of simple-chat",
+  "version": "0.1.0",
+  "author": "thundermiracle",
+  "bugs": {
+    "url": "https://github.com/thundermiracle/simple-chat/issues"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  },
+  "devDependencies": {},
+  "homepage": "https://thundermiracle.github.io/simple-chat",
+  "keywords": [
+    "graphql",
+    "socket",
+    "chat"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thundermiracle/simple-chat.git"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
