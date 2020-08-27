@@ -1,0 +1,30 @@
+.messages {
+  display: flex;
+  padding-bottom: 1em;
+  justify-content: flex-start;
+  &.currentUser {
+    justify-content: flex-end;
+  }
+  .name {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    border: 2px solid #e5e6ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+  }
+  .content {
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 60%;
+    background: #e5e6ea;
+    color: #000;
+    &.currentUser {
+      background: #58bf56;
+      color: #fff;
+    }
+  }
+}
