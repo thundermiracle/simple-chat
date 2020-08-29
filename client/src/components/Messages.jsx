@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, useSubscription, gql } from "@apollo/client";
 
 import "./Messages.scss";
 
@@ -14,8 +14,18 @@ const GET_MESSAGES = gql`
   }
 `;
 
+const SUBSCRIPTION_MESSAGES = gql`
+  subscription SubscriptionMessages {
+    messages {
+      id
+      content
+      user
+    }
+  }
+`;
+
 function Messages({ user }) {
-  const { loading, error, data } = useQuery(GET_MESSAGES);
+  const { loading, error, data } = useSubscription(SUBSCRIPTION_MESSAGES);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;

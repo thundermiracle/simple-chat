@@ -1,4 +1,4 @@
-const messages = require("./db").messages;
+const { messages, subscribers } = require("./db");
 
 module.exports = {
   postMessage: (parent, { user, content }) => {
@@ -9,6 +9,8 @@ module.exports = {
       user,
       content,
     });
+
+    subscribers.forEach((fn) => fn());
 
     return id;
   },
